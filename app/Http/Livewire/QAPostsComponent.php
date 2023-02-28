@@ -12,7 +12,7 @@ class QAPostsComponent extends Component
         // return view of livewire component with posts data from database 
         return view(
             'livewire.q-a-posts-component', 
-            ['posts' => Post::all()
-        ]);
+            ['posts' => Post::all()]
+        );
     }
 }
