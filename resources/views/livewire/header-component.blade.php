@@ -1,10 +1,10 @@
 <div>
-    <header class="bg-white py-5 border-t-4 border-blue-700">
-        <h1 class="text-center text-white py-4 uppercase font-black">
-            Jari van Kaam - Webdeveloper
+    <header class="bg-white py-5 border-t-4 border-black">
+        <h1 class="text-center text-black py-4 uppercase font-black">
+            Ask away in this Q And A
         </h1>
     </header>
-    <nav class="bg-black text-white py-2">
+    <nav class="bg-white border-t-4  text-black py-2">
         <ul class="flex justify-center">
             <li class="px-4 py-2"><a href="#">Menu Item 1</a></li>
             <li class="px-4 py-2"><a href="#">Menu Item 2</a></li>
