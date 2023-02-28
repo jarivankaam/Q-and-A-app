@@ -6,7 +6,8 @@
     </header>
     <nav class="bg-white border-t-4  text-black py-2">
         <ul class="flex justify-center">
-            <li class="px-4 py-2"><a href="/dashboard">Inloggen/Registeren</a></li>
+            <li class="px-4 py-2"><a href="/dashboard">Inloggen</a></li>
+            <li class="px-4 py-2"><a href="/register">Registeren</a></li>
         </ul>
     </nav>
 </div>
