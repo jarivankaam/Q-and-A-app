@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -13,9 +14,11 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
+        $users = User::all();
 
         return view('posts.index', [
             'posts' => $posts,
+            'users' => $users
         ]);
     }
 
@@ -24,7 +27,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -32,7 +35,19 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'contents' => 'required',
+            'user_id' => 'required'
+        ]);
+
+        $post = new Post();
+        $post->title = $request->title;
+        $post->contents = $request->contents;
+        $post->user_id = $request->user_id;
+        $post->save();
+
+        return redirect(route('posts.index'));
     }
 
     /**

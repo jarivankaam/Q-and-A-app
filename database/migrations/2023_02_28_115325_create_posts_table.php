@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->string('contents');
-            $table->string('status');
-            $table->string('type');
+            $table->string('status')->nullable();
+            $table->string('type')->nullable();
             $table->string('image-path')->nullable();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
