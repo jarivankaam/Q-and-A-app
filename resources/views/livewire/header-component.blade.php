@@ -4,7 +4,7 @@
             Query Corner: <span> Place for All Your Inquiries</span>
         </h1>
     </header>
-    <nav class="bg-white  text-black py-2">
+    <nav class="bg-white hide  text-black py-2">
         <ul class="flex justify-center">
             <li class="px-4 py-2"><a href="/dashboard">Inloggen</a></li>
             <li class="px-4 py-2"><a href="/register">Registeren</a></li>

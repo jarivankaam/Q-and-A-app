@@ -15,6 +15,13 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    @if (Auth::check())
+        <style>
+            .hide {
+                display: none;
+            }
+        </style>
+    @endif
 </head>
 
 <body class="font-sans antialiased">
