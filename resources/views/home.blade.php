@@ -7,6 +7,7 @@
 
         @if(empty($posts))
             <p>Here posts will be ar....</p>
+
         @endif
 
         @foreach ($posts as $post)
