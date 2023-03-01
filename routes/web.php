@@ -35,6 +35,8 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
+    Route::get('/posts/create', [PostsController::class, 'create'])->name('posts.create');
+    Route::resource('posts', PostsController::class);
 });
 
 
