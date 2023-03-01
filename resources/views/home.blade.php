@@ -4,6 +4,6 @@
     </x-slot>
 
     <x-slot name="slot">
-        <p>Hier komen de posts....</p>
+        <p>Here posts will be ar....</p>
     </x-slot>
 </x-app-layout>
