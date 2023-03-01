@@ -10,4 +10,4 @@
             <li class="px-4 py-2"><a href="/register">Registeren</a></li>
         </ul>
     </nav>
-</div>
+</div>          
