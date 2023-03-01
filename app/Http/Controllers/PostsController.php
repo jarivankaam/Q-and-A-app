@@ -36,14 +36,12 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'contents' => 'required',
+            'message' => 'required',
             'user_id' => 'required'
         ]);
 
         $post = new Post();
-        $post->title = $request->title;
-        $post->contents = $request->contents;
+        $post->message = $request->message;
         $post->user_id = $request->user_id;
         $post->save();
 

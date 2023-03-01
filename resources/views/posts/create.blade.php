@@ -7,32 +7,17 @@
         @csrf
         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
         <div class="mb-4">
-            <label class="block font-bold mb-2" for="title">
-                Title
-            </label>
-            <input
-                class="appearance-none border rounded w-full py-2 text-gray-700 px-3 leading-tight focus:outline-none focus:shadow-outline @error('title') border-red-500 @enderror"
-                id="title"
-                type="text"
-                name="title"
-                required
-            >
-            @error('name')
-            <p class="text-red-500 text-xs italic mt-2">{{ $message }}</p>
-            @enderror
-        </div>
-        <div class="mb-4">
-            <label class="block font-bold mb-2" for="content">
-                Content
+            <label class="block font-bold mb-2" for="message">
+                Message
             </label>
             <textarea
-                class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('content') border-red-500 @enderror"
-                id="contents"
-                name="contents"
+                class="appearance-none bg-transparent border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline @error('message') border-red-500 @enderror"
+                id="message"
+                name="message"
                 rows="5"
                 placeholder="Enter your message here"
                 required
-            >{{ old('message') }}</textarea>
+            ></textarea>
             @error('message')
             <p class="text-red-500 text-xs italic mt-2">{{ $message }}</p>
             @enderror
