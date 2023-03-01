@@ -9,17 +9,19 @@
             <p>Here posts will be ar....</p>
         @endif
 
-        @foreach ($posts as $post)
-            <div class="flex flex-col justify-center items-center mt-10">
-                <div class="w-1/2">
-                    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-6 text-gray-900 dark:text-gray-100">
-                            <h1 class="text-2xl font-bold">{{ $post->title }}</h1>
-                            <p class="text-sm">{{ $post->contents }}</p>
+        @if(!empty($posts))
+            @foreach ($posts as $post)
+                <div class="flex flex-col justify-center items-center mt-10">
+                    <div class="w-1/2">
+                        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="p-6 text-gray-900 dark:text-gray-100">
+                                <h1 class="text-2xl font-bold">{{ $post->title }}</h1>
+                                <p class="text-sm">{{ $post->contents }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        @endif
     </x-slot>
 </x-app-layout>
