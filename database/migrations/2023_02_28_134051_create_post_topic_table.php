@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('post_topic', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('topic_id');
-            $table->unsignedBigInteger('post_id');
-            $table->foreign('topic_id')->references('id')->on('topics');
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreignId('topic_id')->references('id')->on('topics');
+            $table->foreignId('post_id')->references('id')->on('posts');
             $table->timestamps();
         });
     }

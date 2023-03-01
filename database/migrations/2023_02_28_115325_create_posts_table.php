@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('type');
             $table->string('image-path')->nullable();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
