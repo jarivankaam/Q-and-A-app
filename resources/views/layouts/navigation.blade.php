@@ -12,13 +12,14 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                    <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
+                        <i class="fa-solid fa-house"></i>
                     </x-nav-link>
-                    <x-nav-link :href="route('posts.index')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link  class="flex flex-col-reverse px-10 py-2" :href="route('posts.index')" :active="request()->routeIs('posts.index')">
                         {{ __('Posts') }}
+                        <i class="fa-solid fa-plus"></i>
                     </x-nav-link>
-
                 </div>
             </div>
 
@@ -27,7 +28,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+                            <div ><i class="fa-solid fa-user px-2"></i>{{ Auth::user()->name }}</div>
 
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -39,10 +40,10 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            <i class="fa-solid fa-users"></i> {{ __('Profile') }}
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('dashboard')">
-                            {{ __('Dashboard') }}
+                            <i class="fa-solid fa-spaghetti-monster-flying"></i> {{ __('Dashboard') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -52,7 +53,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                <i class="fa-solid fa-right-from-bracket"></i> {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
