@@ -1,7 +1,7 @@
 <div>
     <header class="bg-white py-5 border-t-4 border-black">
         <h1 class="text-center text-black py-4 uppercase font-black">
-            <a href="/">Ask away in this Q And A</a>
+            <a href="/">Query Corner: A Place for All Your Inquiries</a>
         </h1>
     </header>
     <nav class="bg-white  text-black py-2">
