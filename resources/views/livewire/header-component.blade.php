@@ -1,7 +1,7 @@
 <div>
     <header class="bg-white py-5 border-t-4 border-black">
         <h1 class="text-center text-black py-4 uppercase">
-            Query Corner: <span> Place for All Your Inquiries</span>
+            Uptree: <span> For all your questions</span>
         </h1>
     </header>
     <nav class="bg-white hide text-black py-2">
