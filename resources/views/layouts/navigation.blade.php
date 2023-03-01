@@ -29,16 +29,16 @@
 
             </div>
             @if (!Auth::check())
-                <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-8 flex" >
-                    <x-nav-link class="flex flex-col-reverse px-10" :href="route('login')"
+                <div class="hidden sm:flex sm:-my-px sm:ml-6 space-x-8 flex" >
+                    <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('login')"
                                 :active="request()->routeIs('login')">
-                        {{ __('Login') }}
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i> {{ __('Login') }}
+
                     </x-nav-link>
-                    <x-nav-link class="flex flex-col-reverse px-10" :href="route('register')"
+                    <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('register')"
                                 :active="request()->routeIs('register')">
-                        {{ __('Register') }}
-                        <i class="fa-solid fa-user-plus"></i>
+                        <i class="fa-solid fa-user-plus"></i> {{ __('Register') }}
+
                     </x-nav-link>
                 </div>
             @endif
