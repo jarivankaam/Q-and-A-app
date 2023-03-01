@@ -4,10 +4,10 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class HeaderComponent extends Component
+class HeroComponent extends Component
 {
     public function render()
     {
-        return view('livewire.header-component');
+        return view('livewire.hero-component');
     }
 }
