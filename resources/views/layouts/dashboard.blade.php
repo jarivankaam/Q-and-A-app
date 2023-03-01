@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="container">
+    <main>
         @yield("content")
-    </div>
+    </main>
 </x-app-layout>
