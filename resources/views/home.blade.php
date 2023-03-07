@@ -37,7 +37,7 @@
                 </div>
                 <div class="flex items-center justify-end">
                     <button class="px-4 py-2 bg-blue-600 text-white rounded-[35px] hover:bg-blue-700 transition duration-200" type="submit">
-                        <i class="fa-solid fa-share mr-2"></i> Save
+                        <i class="fa-solid fa-circle-plus mr-2"></i> Save
                     </button>
                 </div>
             </form>
