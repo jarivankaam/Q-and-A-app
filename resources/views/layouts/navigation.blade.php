@@ -65,10 +65,10 @@
 
                         <x-slot name="content">
                             <x-dropdown-link :href="route('profile.edit')">
-                                <i class="fa-solid fa-users"></i> {{ __('Profile') }}
+                                <i class="fa-solid fa-users px-2"></i>{{ __('Profile') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('dashboard')">
-                                <i class="fa-solid fa-spaghetti-monster-flying"></i> {{ __('Dashboard') }}
+                            <x-dropdown-link :href="route('posts.index')">
+                                <i class="fa-solid fa-qrcode px-2"></i>{{ __('Dashboard') }}
                             </x-dropdown-link>
 
                             <!-- Authentication -->
@@ -78,7 +78,7 @@
                                 <x-dropdown-link :href="route('logout')"
                                                  onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    <i class="fa-solid fa-right-from-bracket"></i> {{ __('Log Out') }}
+                                        <i class="fa-solid fa-right-from-bracket px-2"></i>{{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
