@@ -14,15 +14,17 @@
         <tbody class=" divide-y divide-gray-200">
         @foreach($posts as $post)
             <tr class="text-left">
-               <!--- check if the logged in user has the same userid as the post --->
-                @if(Auth::id() == $post->user_id)
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="text-sm text-white-900">{{$post->message}}</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="text-sm text-white-900">{{$post->created_at->diffForHumans()}}</div>
-                    </td>
-                @endif
+                <td class="px-6 py-4 whitespace-nowrap ">
+                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-900">{{$post->message}}</a>
+                </td>
+                @foreach($users as $user)
+                    @if($post->user_id == $user->id)
+                        <td class="px-6 py-4 whitespace-nowrap">{{$user->name}}</td>
+                    @else
+                        <td class="px-6 py-4 whitespace-nowrap">{{$post->user_id}}</td>
+                    @endif
+                @endforeach
+
 
             </tr>
         @endforeach
