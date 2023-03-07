@@ -23,16 +23,62 @@
                 </div>
             </div>
             <div class="flex items-center justify-end">
-                <button class="px-4 py-2 bg-blue-600 my-5 text-white rounded-[35px] hover:bg-blue-700 transition duration-200">
+                <button id="show-form" class="px-4 py-2 bg-blue-600 my-5 text-white rounded-[35px] hover:bg-blue-700 transition duration-200">
                     <i class="fa-solid fa-reply mr-2"></i>Reply
                 </button>
             </div>
+            <form method="POST" action="" id="my-form" class="hidden w-1/2 mx-auto pt-4 rounded-lg text-left">
+                @csrf
+                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                <div class="mb-4">
+                    <label class="block font-bold mb-2" for="message">
+                        Add Comment
+                    </label>
+                    <div class="flex justify-center items-center flex-row ">
+                        @if(!empty($post->user->profile_picture_url) )
+                            <img class="w-10 h-10 rounded-full mr-7" src="{{ $post->user->profile_picture_url }}" alt="Profile picture">
+                        @else
+                            <img class="w-10 h-10 rounded-full mr-7" src="{{ asset('img/uptree_profilepic_placeholder.png') }}" alt="Profile picture">
+                        @endif
+                        <textarea
+                            class="block resize-none mt-5 w-full px-4 py-2 leading-tight bg-transparent border border-gray-200 rounded-lg focus:border-gray-500
+                        focus:outline-none @error('message') border-red-500 @enderror"
+                            id="message"
+                            name="message"
+                            rows="3"
+                            placeholder="Enter your message here"
+                            required
+                        ></textarea>
+                    </div>
+
+                    @error('message')
+                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="flex items-center justify-end">
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-[35px] hover:bg-blue-700 transition duration-200" type="submit">
+                        <i class="fa-solid fa-circle-plus mr-2"></i> Save
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
+    <script>
+        const showFormButton = document.querySelector('#show-form');
+        const form = document.querySelector('#my-form');
 
+        showFormButton.addEventListener('click', () => {
+            form.classList.toggle('hidden');
+        });
+    </script>
 
 
 
 
 @endsection
+
+
+
+
+
