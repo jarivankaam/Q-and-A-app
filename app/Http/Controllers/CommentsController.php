@@ -21,6 +21,15 @@ class CommentsController extends Controller
      */
     public function create(Request $request)
     {
+
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
         //write a query to use request to insert a new comment into the database
         $request->validate([
             'message' => 'required',
@@ -34,16 +43,7 @@ class CommentsController extends Controller
         $comment->post_id = $request->post_id;
         $comment->save();
 
-        return redirect(route('home'));
-
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-
+        return redirect()->back();
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\CommentsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
     Route::get('/posts/create', [PostsController::class, 'create'])->name('posts.create');
     Route::resource('posts', PostsController::class);
+    Route::resource('comments', CommentsController::class);
 });
 
 
