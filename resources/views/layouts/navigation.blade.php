@@ -21,8 +21,8 @@
                     </x-nav-link>
                     <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('posts.index')"
                                 :active="request()->routeIs('posts.index')">
-                        {{ __('Posts') }}
-                        <i class="fa-solid fa-plus"></i>
+                        {{ __('My Posts') }}
+                        <i class="fa-solid fa-envelope"></i>
                     </x-nav-link>
 
                 </div>
