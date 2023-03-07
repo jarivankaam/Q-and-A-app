@@ -45,7 +45,7 @@ class PostsController extends Controller
         $post->user_id = $request->user_id;
         $post->save();
 
-        return redirect(route('posts.index'));
+        return redirect(route('home'));
     }
 
     /**
