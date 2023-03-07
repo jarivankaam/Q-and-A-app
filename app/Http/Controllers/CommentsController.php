@@ -19,7 +19,7 @@ class CommentsController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
         //write a query to use request to insert a new comment into the database
         $request->validate([
