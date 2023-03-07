@@ -7,8 +7,8 @@
     <table class="mt-8 mr-auto ml-auto w-3/4 divide-y divide-gray-200">
         <thead class="bg-darkblue-50">
         <tr>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ __('Message') }}</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ __('Message created') }}</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Message</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
         </tr>
         </thead>
         <tbody class=" divide-y divide-gray-200">
