@@ -67,7 +67,7 @@
                             <x-dropdown-link :href="route('profile.edit')">
                                 <i class="fa-solid fa-users px-2"></i>{{ __('Profile') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('dashboard')">
+                            <x-dropdown-link :href="route('posts.index')">
                                 <i class="fa-solid fa-qrcode px-2"></i>{{ __('Dashboard') }}
                             </x-dropdown-link>
 
