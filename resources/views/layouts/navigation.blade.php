@@ -32,12 +32,12 @@
                 <div class="hidden sm:flex sm:-my-px sm:ml-6 space-x-8 flex" >
                     <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('login')"
                                 :active="request()->routeIs('login')">
-                        <i class="fa-solid fa-user"></i> {{ __('Login') }}
+                        {{ __('Login') }} <i class="fa-solid fa-user"></i>
 
                     </x-nav-link>
                     <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('register')"
                                 :active="request()->routeIs('register')">
-                        <i class="fa-solid fa-user-plus"></i> {{ __('Register') }}
+                         {{ __('Register') }} <i class="fa-solid fa-user-plus"></i>
 
                     </x-nav-link>
                 </div>
