@@ -41,6 +41,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('comments', CommentsController::class);
 });
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 
 require __DIR__.'/auth.php';
 

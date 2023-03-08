@@ -5,10 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('home') }}">
-
                         <img src="{{ asset('img/uptree_white.png') }}" class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
                 </div>
 
 
@@ -21,8 +18,13 @@
                     </x-nav-link>
                     <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('posts.index')"
                                 :active="request()->routeIs('posts.index')">
-                        {{ __('My Posts') }}
-                        <i class="fa-solid fa-envelope"></i>
+                        {{ __('My Twigs') }}
+                        <i class="fa-solid fa-chart-gantt"></i>
+                    </x-nav-link>
+                    <x-nav-link class="flex flex-col-reverse px-10 py-2" :href="route('about')"
+                                :active="request()->routeIs('about')">
+                        {{ __('About us') }}
+                        <i class="fa-solid fa-people-group"></i>
                     </x-nav-link>
 
                 </div>
@@ -67,10 +69,6 @@
                             <x-dropdown-link :href="route('profile.edit')">
                                 <i class="fa-solid fa-users px-2"></i>{{ __('Profile') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('posts.index')">
-                                <i class="fa-solid fa-qrcode px-2"></i>{{ __('Dashboard') }}
-                            </x-dropdown-link>
-
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
