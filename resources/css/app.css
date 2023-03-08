@@ -32,3 +32,23 @@ h2, h3, h4, h5, h6, p, a, span, em {
     -moz-box-shadow: 0 0 41px -4px rgba(0,0,0,0.25);
     box-shadow: 0 0 41px -4px rgba(0,0,0,0.25);
   }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all .3s;
+}
+
+
+.sticky + .content {
+    padding-top: 102px;
+    transition:  .3s;
+}
+.content {
+    padding: 16px;
+    transition: .3s;
+}
+html {
+    scroll-behavior: smooth;
+}
