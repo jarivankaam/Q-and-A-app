@@ -107,8 +107,10 @@
                                     id="message"
                                     name="message"
                                     rows="3"
-                                    required
-                                >{{ $comment->content }}</textarea>
+                                    required>
+
+                                    {{ $comment->content }}
+                                </textarea>
                             </div>
 
                             @error('message')
