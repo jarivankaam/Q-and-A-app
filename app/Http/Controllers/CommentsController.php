@@ -65,9 +65,22 @@ class CommentsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        //write a query to use request to insert a new comment into the database
+        $request->validate([
+            'message' => 'required',
+            'user_id' => 'required',
+            'post_id' => 'required'
+        ]);
+
+        $comment = Comment::findOrFail($id);
+        $comment->content = $request->message;
+        $comment->user_id = $request->user_id;
+        $comment->post_id = $request->post_id;
+        $comment->save();
+
+        return redirect(route('posts.show', $comment->post_id));
     }
 
     /**

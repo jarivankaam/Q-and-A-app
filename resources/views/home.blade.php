@@ -19,8 +19,7 @@
                                  src="{{ asset('img/uptree_profilepic_placeholder.png') }}" alt="Profile picture">
                         @endif
                         <textarea
-                            class="block resize-none mt-5 w-full px-4 py-2 leading-tight bg-transparent border border-gray-200 rounded-lg focus:border-gray-500
-                        focus:outline-none @error('message') border-red-500 @enderror"
+                            class="block resize-none mt-5 w-full px-4 py-2 leading-tight rounded-lg dark:bg-gray-800 border-none focus:border-gray-50 outline-none @error('message') border-red-500 @enderror"
                             id="message"
                             name="message"
                             rows="3"
