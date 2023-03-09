@@ -44,12 +44,12 @@
 
         @else
             <div class="my-8 mr-auto ml-auto w-3/4 flex justify-center items-center flex-col ">
-                <p class="text-small text-gray-500 dark:text-gray-400 mb-4">Log in or Sign in to make posts:</p>
+                <p class="text-small text-gray-500 dark:text-gray-400 mb-4">Login to make posts:</p>
                 <a href="{{ route('login') }}"
                    class="disabled:opacity-50 inline-block px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-200"
                    disabled tabindex="-1">
                     <i class="fa-solid fa-user"></i>
-                    Log in/Sign in
+                    Login
                 </a>
             </div>
         @endif
