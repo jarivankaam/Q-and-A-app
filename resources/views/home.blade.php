@@ -3,12 +3,12 @@
 
         @if (Auth::check())
 
-            <form method="POST" action="{{ route('posts.store') }}" class="w-1/2 mx-auto pt-4 rounded-lg text-left">
+            <form method="POST" action="{{ route('posts.store') }}" class="w-1/2 mx-auto my-7 pt-4 rounded-lg text-left">
                 @csrf
                 <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                 <div class="mb-4">
                     <label class="block font-bold mb-2" for="message">
-                        Make a post
+                        Post a Twig
                     </label>
                     <div class="flex justify-center items-center flex-row ">
                         @if(!empty($post->user->profile_picture_url) )
