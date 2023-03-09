@@ -66,7 +66,7 @@
             </div>
             @foreach($comments as $comment)
                 @if($post->id == $comment->post_id)
-                    <div class="bg-white dark:bg-gray-800 @if($comment->user_id == Auth::id()) ml-20 dark:bg-gray-600  @endif  overflow-hidden shadow-sm sm:rounded-lg ml-10 mb-5">
+                    <div class="bg-white dark:bg-gray-800 @if($comment->user_id == Auth::id()) dark:bg-gray-500  @endif  overflow-hidden shadow-sm sm:rounded-lg ml-10 mb-5">
                         <div class="p-7 text-gray-900 dark:text-gray-100 text-left">
                             <p class="text-xl">{{ $comment->content }}</p>
                             <div class="flex items-center mt-6">
