@@ -3,12 +3,12 @@
 
         @if (Auth::check())
 
-            <form method="POST" action="{{ route('posts.store') }}" class="w-1/2 mx-auto pt-4 rounded-lg text-left">
+            <form method="POST" action="{{ route('posts.store') }}" class="w-1/2 mx-auto my-7 pt-4 rounded-lg text-left">
                 @csrf
                 <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                 <div class="mb-4">
                     <label class="block font-bold mb-2" for="message">
-                        Make a post
+                        Post a Twig
                     </label>
                     <div class="flex justify-center items-center flex-row ">
                         @if(!empty($post->user->profile_picture_url) )
@@ -43,13 +43,13 @@
             </form>
 
         @else
-            <div class="mt-8 mr-auto ml-auto w-3/4 flex justify-center items-center flex-col ">
-                <p class="text-small text-gray-500 dark:text-gray-400 mb-4">Log in or Sign in to make posts:</p>
+            <div class="my-8 mr-auto ml-auto w-3/4 flex justify-center items-center flex-col ">
+                <p class="text-small text-gray-500 dark:text-gray-400 mb-4">Login to make posts:</p>
                 <a href="{{ route('login') }}"
                    class="disabled:opacity-50 inline-block px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-200"
                    disabled tabindex="-1">
                     <i class="fa-solid fa-user"></i>
-                    Log in/Sign in
+                    Login
                 </a>
             </div>
         @endif
