@@ -107,10 +107,8 @@
                                     id="message"
                                     name="message"
                                     rows="3"
-                                    placeholder="Enter your message here"
-                                    value="{{ $comment->content }}"
                                     required
-                                ></textarea>
+                                >{{ $comment->content }}</textarea>
                             </div>
 
                             @error('message')
