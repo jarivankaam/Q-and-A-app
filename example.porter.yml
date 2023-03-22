@@ -1,0 +1,9 @@
+services:
+
+#when using sail uncomment this
+# name: Sail
+ # command: ./vendor/bin/sail up -d
+
+- name: Vite
+  command: npm run dev
+
