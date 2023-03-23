@@ -163,12 +163,11 @@
 
         const showUpdateCommentButton = document.querySelector('#show-comment-update');
         const updateCommentForm = document.querySelector('#comment-update');
-        const clickedComment = document.querySelector('#comment-{{ $comment->id }}');
 
         showUpdateCommentButton.addEventListener('click', () => {
             updateCommentForm.classList.toggle('hidden');
             showUpdateCommentButton.classList.toggle('hidden');
-            clickedComment.classList.toggle('hidden');
+
         });
     </script>
 

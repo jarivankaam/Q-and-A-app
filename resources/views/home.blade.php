@@ -78,9 +78,14 @@
                                              src="{{ asset('img/uptree_profilepic_placeholder.png') }}"
                                              alt="Profile picture">
                                     @endif
-                                    <p class="font-medium text-gray-900 dark:text-gray-100"> {{ $post->user->name }} -
+                                    <p class="font-medium text-gray-900 dark:text-gray-100"> {{ $post->user->name }}
+                                        <span class="separator"></span>
                                         <span
                                             class="ml-auto text-gray-500 dark:text-gray-400">{{ $post->created_at->diffForHumans() }}</span>
+                                        <span class="separator"></span>
+                                        @if(!empty($post->comments))
+                                            <span class="ml-auto text-gray-500 dark:text-gray-400">{{ count($post->comments) }} comments</span>
+                                        @endif
                                     </p>
                                 </div>
 
